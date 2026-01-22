@@ -12,8 +12,13 @@ public class Program2 {
 
 		System.out.println("==== TEST 1: Insert ====");
 		Department dep = new Department(9,"Software");
-		department.insert(dep);
+//		department.insert(dep);
 		System.out.println("Insert Success");
+		
+		System.out.println("==== TEST 2: Update====");
+		dep.setName("food");
+		department.update(dep);
+		System.out.println("Update Success");
 	}
 
 }

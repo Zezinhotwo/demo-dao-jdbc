@@ -11,7 +11,6 @@ public class Program2 {
 		DepartmentDao department = DaoFactory.createDepartmentDao();
 		Department dep = new Department(5, "Software");
 
-
 		System.out.println("==== TEST 1: Insert ====");
 		department.insert(dep);
 		System.out.println("Insert Success");
@@ -20,10 +19,13 @@ public class Program2 {
 		dep.setName("food");
 		department.update(dep);
 		System.out.println("Update Success");
-		
+
 		System.out.println("==== TEST 3: Delete ====");
-		department.deletById(dep.getId());
-		System.out.println("Update Success");
+//		department.deletById(dep.getId());
+		System.out.println("Delete Success");
+
+		System.out.println("==== TEST 4: FindById ====");
+		System.out.println("FindById Success: " + department.findById(1));
 
 	}
 
